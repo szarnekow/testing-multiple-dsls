@@ -1,0 +1,9 @@
+grammar zarnekow.hello.HelloDSL with org.eclipse.xtext.common.Terminals
+
+generate helloDSL "http://www.hello.zarnekow/HelloDSL"
+
+Enter:
+	greetings+=Hello*;
+	
+Hello:
+	'Hello' name=ID '!';

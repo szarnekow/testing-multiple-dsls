@@ -1,0 +1,10 @@
+grammar zarnekow.goodbye.GoodbyeDSL with org.eclipse.xtext.common.Terminals
+
+generate goodbyeDSL "http://www.goodbye.zarnekow/GoodbyeDSL"
+import "http://www.hello.zarnekow/HelloDSL"
+
+Leave:
+	farewells+=Goodbye*;
+	
+Goodbye:
+	'Bye' hello=[Hello] '!';
